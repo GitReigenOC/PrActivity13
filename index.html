@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Chapter 13: Page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chapter 13</title>
+</head>
+
+<body>
+    <!-- Chapter 13: Sticky navigation -->
+    <header>
+        <nav id="navbar" aria-label="Main navigation">
+            <ul>
+                <li><a href="#bottom">Bottom</a></li>
+                <li><a href="#middle">Middle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chapter 13: Page sections -->
+        <section class="content-section">
+            <h1>My Portfolio</h1>
+            <p>Skibidi toilet, wibbly wobble, the moon wears a tiny hat.</p>
+            <p>Flibberty-jibbet, zoom zoom, a pickle skateboarded past the clouds.</p>
+            <p>Boopity boppity, the purple toaster sings to a sleepy potato.</p>
+            <p>Skibidi toilet goes splish-splash while a giraffe juggles marshmallows.</p>
+        </section>
+
+        <section class="content-section" id="middle">
+            <h2>About</h2>
+            <p>Skibidi toilet, wibbly wobble, the moon wears a tiny hat.</p>
+            <p>Flibberty-jibbet, zoom zoom, a pickle skateboarded past the clouds.</p>
+            <p>Boopity boppity, the purple toaster sings to a sleepy potato.</p>
+            <p>Skibidi toilet goes splish-splash while a giraffe juggles marshmallows.</p>
+        </section>
+
+        <section class="content-section" id="bottom">
+            <h2>Projects</h2>
+            <article class="project-card">
+                <span class="badge">Featured</span>
+                <h3>My Project</h3>
+                <p>A featured project in my portfolio.</p>
+                <p>Skibidi toilet, wibbly wobble, the moon wears a tiny hat.</p>
+                <p>Flibberty-jibbet, zoom zoom, a pickle skateboarded past the clouds.</p>
+                <p>Boopity boppity, the purple toaster sings to a sleepy potato.</p>
+                <p>Skibidi toilet goes splish-splash while a giraffe juggles marshmallows.</p>
+            </article>
+        </section>
+    </main>
+
+    <button id="backToTop" type="button" aria-label="Back to top">&#8679;</button>
+
+    <script>
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>
